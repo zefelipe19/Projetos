@@ -30,6 +30,6 @@ def prin(msg):
 def musica():
     import pygame
     pygame.mixer.init()
-    pygame.mixer.music.load("Lofi.mp3")
+    pygame.mixer.music.load(".\Projeto_1_Adivinhe o Número\Lofi.mp3")
     pygame.mixer.music.play()
     

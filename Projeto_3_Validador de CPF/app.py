@@ -1,9 +1,5 @@
 import modules
-print("Validador de CPF")
+print("validador de CPF")
 
-cpf = (input("Digite um CPF: "))
-
-if modules.cpf_validate(cpf) == True:
-    print("CPF Valido")
-else:
-    print("CPF Invalido")
+cpf = input("Digite o CPF: ")
+modules.CPFValidator(cpf)

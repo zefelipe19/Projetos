@@ -1,2 +1,3 @@
-Nome do Jogaor: [Felipe]	Pontuação total: [7] pontos	Dificuldade: [Fácil]	Número de partidas: [1]
-Nome do Jogaor: [Jose Felipe]	Pontuação total: [403] pontos	Dificuldade: [Dificíl]	Número de partidas: [9]
+Nome do Jogador: [Test]	Total Score: [46] pontos	Dificuldade: [Easy]	Number of Times: [5]
+Nome do Jogador: [Test2]	Total Score: [147] 	Dificuldade: [Normal]	Number of Times: [5]
+Nome do Jogador: [Test3]	Total Score: [246] 	Dificuldade: [Hard]	Number of Times: [5]

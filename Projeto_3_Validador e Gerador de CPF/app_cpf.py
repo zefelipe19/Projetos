@@ -1,4 +1,4 @@
-import modules
+import modules_app_cpf
 from time import sleep
 
 print("Gerador e Validador de CPF")
@@ -16,11 +16,11 @@ while True:
         menu = str(input("-> "))
     
     if menu == "1":
-        cpf = str(input("Digite o CPF (sem pontuações): "))
-        modules.CPFValidator(cpf)
+        cpf = str(input("Digite o CPF: "))
+        modules_app_cpf.CPFValidator(modules_app_cpf.removerPontuacao(cpf))
 
     elif menu  == "2":
-        modules.CPFGenerator()
+        modules_app_cpf.CPFGenerator()
 
     elif menu == "3":
         print("OK...")

@@ -1,4 +1,11 @@
 # Esse é o modulo que vai receber a string, tranformar em um numero e fazer a validação
+
+def removerPontuacao(arg):
+    removido = arg.replace('.', '')
+    removido = removido.replace('-', '')
+    return removido
+
+
 def CPFValidator(number):
     cpf_original = number
     novo_cpf = cpf_original[:-2]

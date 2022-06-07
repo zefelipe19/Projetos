@@ -1,17 +1,38 @@
 # Esses vão ser os modulos que vão receber as informações dadas no app.py
 
-def removerPontuacao(arg):
+def remover_Pontuacao(arg):
     removido = arg.replace('.', '')
-    removio = removido.replace('/', '')
+    removido = removido.replace('/', '')
     removido = removido.replace('-', '')
+    return removido
 
 
-def validadorCNPJ(arg):
-    cnpj_original = arg
-    novo_cnpj = cnpj_original[:-2]
-    multiplicador = 10
+def validador_CNPJ(arg):
+    lista_cnpj = arg[:-2]
+    multiplicador = 9
     soma_total = 0
 
-    for index in range():
-        pass
+    for i in range(25):
+        i = 12
+        multiplicador = 5
+        if len(lista_cnpj) >= 13:
+            multiplicador = 6
+        
+        for i in lista_cnpj:
+            soma_total += int(lista_cnpj[i]) * multiplicador
+            multiplicador -= 1
 
+            if multiplicador < 2:
+                multiplicador = 9
+
+
+
+print(remover_Pontuacao('09.248.936/0001-00'))
+
+print(validador_CNPJ(remover_Pontuacao(09248936000100)))
+
+
+
+
+
+'''09.248.936/0001-00'''

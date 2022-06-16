@@ -1,4 +1,4 @@
-import modulos_do_app_cnpj # isso está importando o arquivo mudules.py na pasta
+from modulos_do_app_cnpj import remover_Pontuacao, validador_CNPJ # isso está importando o arquivo mudules.py na pasta
 from time import sleep
 
 print('Gerador e Validador de CNPJ')
@@ -17,11 +17,12 @@ while True:
     
     if menu == '1':
         cnpj = str(input('Digite o CNPJ: '))
-        modulos_do_app_cnpj.validadorCNPJ(modulos_do_app_cnpj.removerPontuacao(cnpj))
+        validador_CNPJ(cnpj)
 
     if menu == '2':
         pass
-    else:
+    
+    if menu == '3':
         print('OK....')
         sleep(0.5)
         print('< Volte Sempre >')

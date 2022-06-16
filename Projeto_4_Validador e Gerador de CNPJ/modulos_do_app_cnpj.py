@@ -7,32 +7,56 @@ def remover_Pontuacao(arg):
     return removido
 
 
+def is_sequencia(arg):
+    numero = remover_Pontuacao(arg)
+    sequencia = numero[0] * len(numero)
+
+    if sequencia == numero:
+        return True
+    else:
+        return False
+
+
 def validador_CNPJ(arg):
-    lista_cnpj = arg[:-2]
-    multiplicador = 9
-    soma_total = 0
 
-    for i in range(25):
-        i = 12
-        multiplicador = 5
-        if len(lista_cnpj) >= 13:
-            multiplicador = 6
+    if is_sequencia(arg):
+        print('Esse número é uma sequência.')
+        return False
+    
+    original_cnpj = remover_Pontuacao(arg[:-2])
+    novo_cnpj = original_cnpj
+
+    multiplcador = 5
+    soma_total = i = 0
+
+    while True:
         
-        for i in lista_cnpj:
-            soma_total += int(lista_cnpj[i]) * multiplicador
-            multiplicador -= 1
+        soma_total += int(novo_cnpj[i]) * multiplcador
+        i += 1
+        multiplcador -= 1
 
-            if multiplicador < 2:
-                multiplicador = 9
+        if multiplcador < 2:
+            multiplcador = 9
 
+        if i == 12 and len(novo_cnpj) == 12:
+            digito = 11 - (soma_total % 11)
+            if digito > 9:
+                digito = 0
+            novo_cnpj += str(digito)
+            i = digito = 0
+            multiplcador = 6
+        
+        if i == 13 and len(novo_cnpj) == 13:
+            digito = 11 - (soma_total % 11)
+            if digito > 9:
+                digito = 0
+            novo_cnpj += str(digito)
+            break
+    
+    print(f'O CNPJ que você digitou foi {remover_Pontuacao(arg)}')
+    print(f'O calculado foi {novo_cnpj}')
 
-
-print(remover_Pontuacao('09.248.936/0001-00'))
-
-print(validador_CNPJ(remover_Pontuacao(09248936000100)))
-
-
-
-
-
-'''09.248.936/0001-00'''
+    if novo_cnpj == remover_Pontuacao(arg):
+        print('É válido')
+    else:
+        print('Não é válido')
